@@ -112,3 +112,26 @@ footer span {
   height: 512px;
   background-color: #fbf5f3;
 }
+
+.gm-style-iw + div {
+  display: none;
+}
+
+#maps-info-window {
+  padding: 16px;
+}
+
+#maps-info-window .maps-title {
+  display: block;
+  margin-bottom: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ff9c2e;
+}
+
+#maps-info-window .maps-text {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #002a32;
+}

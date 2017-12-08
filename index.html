@@ -147,7 +147,6 @@
 
   <!--Import map from Google Maps-->
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBR5oNCMdyVGxfnRIr_id6-SvJmrGzwb6A&callback=initMap"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=?callback=myMap"></script>
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
@@ -156,10 +155,29 @@
 
     function initMap() {
       var mapOptions = {
-          center: new google.maps.LatLng(38.737383, -9.303124),
-          zoom: 10
+          center: new google.maps.LatLng(38.738036, -9.303232),
+          disableDefaultUI: true,
+          clickableIcons: false,
+          draggable: false,
+          zoom: 17
         }
+
       var map = new google.maps.Map(document.getElementById("map-section"), mapOptions);
+      initialize(map);
+    }
+
+    function initialize(map) {
+      var infoWindow = new google.maps.InfoWindow();
+      var windowLatLng = new google.maps.LatLng(38.737383, -9.303124);
+      infoWindow.setOptions({
+          content: "<div id='maps-info-window'>                                     \
+                      <span class='maps-title'>Campus TagusPark - Sala 0.55</span>  \
+                      <span class='maps-text'>Av. Prof. Dr. Cavaco Silva</span>     \
+                      <span class='maps-text'>2744-016 Porto Salvo</span>           \
+                    </div>",
+          position: windowLatLng
+      });
+      infoWindow.open(map);
     }
   </script>
 </body>
