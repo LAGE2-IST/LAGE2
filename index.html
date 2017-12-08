@@ -7,6 +7,11 @@
 
   <title>LAGE2</title>
 
+  <!--Import Source Sans Pro Font-->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+
+  <!--Import Font Awesome Icon Font-->
+  <link rel="stylesheet" href="css/font-awesome.min.css">
   <!--Import Google Icon Font-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--Import materialize.css-->
@@ -18,10 +23,144 @@
 
 <body>
 
-  
+  <nav>
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo">LAGE2</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="sass.html">Quem Somos?</a></li>
+        <li><a href="collapsible.html">Actividades</a></li>
+        <li><a href="badges.html">Membros</a></li>
+        <li><a href="mobile.html">Contactos</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="sass.html">Quem Somos?</a></li>
+        <li><a href="badges.html">Contactos</a></li>
+        <li><a href="collapsible.html">Membros</a></li>
+        <li><a href="mobile.html">Contactos</a></li>
+      </ul>
+    </div>
+  </nav>
 
+  <main id="home">
+    <section id="top-section">
+      <div class="container">
+        <div class="title-container center-align">
+          <span class="title">LAGE2</span>
+          <span class="subtitle">Laboratório de Apoio à Gestão de Actividades Extracurriculares dos Estudantes</span>
+          <hr>
+        </div>
+        <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mollis id lorem vel fringilla. Donec lacinia libero velit, id luctus metus varius ut. Vivamus condimentum euismod mauris, non consequat sapien luctus vitae. Nam dictum massa nisl, a sollicitudin sapien sagittis ut. In elementum ex sit amet eros mattis, non venenatis diam eleifend. Nullam rutrum, lectus at viverra congue, mi nulla hendrerit ante, a hendrerit dui odio quis eros. Sed ac commodo quam.</span>
+      </div>
+    </section>
+
+    <section id="video-section">
+      <div class="container center-align">
+        <video width="400" controls>
+          <source src="videos/video.mp4" type="video/mp4">
+          Your browser does not support HTML5 video.
+        </video>
+      </div>
+    </section>
+
+    <section id="events-section">
+      <div class="container">
+        <div class="title-container center-align">
+          <span class="title">Próximos Eventos</span>
+          <hr>
+        </div>
+        <div class="row">
+          <div class="col s12 m6 l3">
+            <div class="card">
+              <div class="card-image">
+                <img src="images/events-sample.png">
+                <span class="card-title">Evento</span>
+              </div>
+              <div class="card-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mollis id lorem vel fringilla.</p>
+              </div>
+              <div class="card-action">
+                <a href="#">Link</a>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6 l3">
+            <div class="card">
+              <div class="card-image">
+                <img src="images/events-sample.png">
+                <span class="card-title">Evento</span>
+              </div>
+              <div class="card-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mollis id lorem vel fringilla.</p>
+              </div>
+              <div class="card-action">
+                <a href="#">Link</a>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6 l3">
+            <div class="card">
+              <div class="card-image">
+                <img src="images/events-sample.png">
+                <span class="card-title">Evento</span>
+              </div>
+              <div class="card-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mollis id lorem vel fringilla.</p>
+              </div>
+              <div class="card-action">
+                <a href="#">Link</a>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6 l3">
+            <div class="card">
+              <div class="card-image">
+                <img src="images/events-sample.png">
+                <span class="card-title">Evento</span>
+              </div>
+              <div class="card-content">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam mollis id lorem vel fringilla.</p>
+              </div>
+              <div class="card-action">
+                <a href="#">Link</a>
+              </div>
+            </div>
+          </div>
+      </div>
+      </div>
+    </section>
+
+    <section id="map-section"></section>
+  </main>
+
+  <footer>
+    <div class="container center-align">
+      <a href="https://tecnico.ulisboa.pt"><img id="logo-ist" src="images/logoist.png" alt="IST"></a>
+      <ul id="social">
+        <li><a href="https://www.facebook.com/lagee2"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a href="https://twitter.com/lagee2"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+        <li><a href="http://www.youtube.com/user/Lage2atIST"><i class="fa fa-youtube-play" aria-hidden="true"></i></i></a></li>
+      </ul>
+      <span>{Ultima actualização}</span>
+    </div>
+  </footer>
+
+  <!--Import map from Google Maps-->
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBR5oNCMdyVGxfnRIr_id6-SvJmrGzwb6A&callback=initMap"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=?callback=myMap"></script>
   <!--Import jQuery before materialize.js-->
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script type="text/javascript">
+    $(".button-collapse").sideNav();
+
+    function initMap() {
+      var mapOptions = {
+          center: new google.maps.LatLng(38.737383, -9.303124),
+          zoom: 10
+        }
+      var map = new google.maps.Map(document.getElementById("map-section"), mapOptions);
+    }
+  </script>
 </body>
 </html>

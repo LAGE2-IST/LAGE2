@@ -1,0 +1,114 @@
+html {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/* nav css */
+nav {
+  background-color: #002a32;
+}
+
+nav .brand-logo {
+  padding-left: 16px;
+}
+
+/* footer css */
+footer {
+  background-color: #0b2027;
+  padding: 64px 0px;
+}
+
+footer #logo-ist {
+  width: 250px;
+  height: auto;
+}
+
+footer #social {
+  padding: 8px 0px;
+}
+
+footer ul li {
+  display: inline;
+}
+
+footer ul li a {
+  padding: 0px 8px;
+  font-size: 24px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+footer span {
+  text-transform: uppercase;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+/* home css */
+#home #top-section {
+  padding: 128px 0px;
+  background-color: #002a32;
+}
+
+#home #top-section .title-container {
+  margin-bottom: 32px;
+}
+
+#home #top-section .title-container .title {
+  display: block;
+  font-size: 32px;
+  color: #ff9c2e;
+}
+
+#home #top-section .title-container .subtitle {
+  display: block;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+#home #top-section .title-container hr {
+  border-width: 2px;
+  border-color: #ff9c2e;
+  max-width: 32em;
+}
+
+#home #top-section span {
+  color: #fbf5f3;
+  font-weight: 300;
+}
+
+#home #video-section {
+  padding: 92px 0px 128px 0px;
+  background-color: #fbf5f3;
+}
+
+#home #video-section video {
+  width: 80%;
+  height: auto;
+}
+
+#home #events-section {
+  padding: 92px 0px 128px 0px;
+  background-color: #002a32;
+}
+
+#home #events-section .title-container {
+  margin-bottom: 32px;
+}
+
+#home #events-section .title-container .title {
+  display: block;
+  font-size: 24px;
+  color: #ffffff;
+}
+
+#home #events-section .title-container hr {
+  border-width: 2px;
+  border-color: #ff9c2e;
+  max-width: 32em;
+}
+
+#home #map-section {
+  width: 100%;
+  height: 512px;
+  background-color: #fbf5f3;
+}
