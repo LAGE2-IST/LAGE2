@@ -1,5 +1,8 @@
-html {
+html, body {
     font-family: 'Source Sans Pro', sans-serif;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 /* nav css */
@@ -38,6 +41,7 @@ footer ul li a {
 }
 
 footer span {
+  display: block;
   text-transform: uppercase;
   font-size: 14px;
   color: #ffffff;
@@ -134,4 +138,69 @@ footer span {
   margin-bottom: 8px;
   font-size: 14px;
   color: #002a32;
+}
+
+
+/* contacts css */
+#contacts {
+  height: 100%;
+  overflow: hidden;
+}
+
+#contacts #map-section {
+  display: inline-block;
+  float: left;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#contacts #contact-section {
+  display: flex;
+  flex-flow: column;
+  width: 50%;
+  height: 100%;
+  float: right;
+  overflow: scroll;
+}
+
+#contacts #contact-section #information {
+  flex: 1 1 auto;
+}
+
+#contacts #contact-section #information .container {
+  padding: 15% 0px;
+}
+
+#contacts #contact-section #information .container #title {
+  display: block;
+  margin-bottom: 24px;
+  font-size: 24px;
+  color: #ff9c2e;
+}
+
+#contacts #contact-section #information .container .contact {
+  display: block;
+  padding: 4px 0px;
+  font-size: 16px;
+  color: #002a32;
+}
+
+#contacts #contact-section #information .container .contact i {
+  margin-right: 8px;
+  font-size: 22px;
+}
+
+#contacts #contact-section #information .container .contact a {
+  text-decoration: none;
+  color: #002a32 !important;
+}
+
+#contacts #contact-section #information .container .contact a:hover {
+  text-decoration: none;
+  color: #0b2027 !important;
+}
+
+#contacts #contact-section footer {
+  flex: 0 1 auto;
 }
