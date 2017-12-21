@@ -14,6 +14,10 @@ nav .brand-logo {
   padding-left: 16px;
 }
 
+nav .brand-logo {
+  color: #ff9c2e !important;
+}
+
 /* footer css */
 footer {
   background-color: #0b2027;
@@ -205,12 +209,35 @@ footer span {
   flex: 0 1 auto;
 }
 
+/* events css */
+#events #calendar-section {
+  padding: 64px 0px 96px 0px;
+  background-color: #002a32;
+}
+
+#events #calendar-section #title {
+  display: block;
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 32px;
+}
+
+#events #past-events-section {
+  padding: 64px 0px 96px 0px;
+  background-color: #fbf5f3;
+}
+
+#events #past-events-section #title {
+  display: block;
+  font-size: 24px;
+  color: #ff9c2e;
+}
 
 #calendar {
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
-  width: 420px;
+  width: 32em;
   margin: 0 auto;
   height: 570px;
   overflow: hidden;
@@ -218,8 +245,8 @@ footer span {
 
 .header {
   height: 50px;
-  width: 420px;
-  background: rgba(66, 66, 66, 1);
+  width: 32em;
+  background: #ff9c2e;
   text-align: center;
   position:relative;
   z-index: 100;
@@ -232,6 +259,7 @@ footer span {
   line-height: 50px;
   font-weight: 100;
   letter-spacing: 1px;
+  color: #fbf5f3;
 }
 
 .lefta, .righta {
@@ -246,13 +274,13 @@ footer span {
 
 .lefta {
   border-width: 7.5px 10px 7.5px 0;
-  border-color: transparent rgba(160, 159, 160, 1) transparent transparent;
+  border-color: transparent #fbf5f3 transparent transparent;
   left: 20px;
 }
 
 .righta {
   border-width: 7.5px 0 7.5px 10px;
-  border-color: transparent transparent transparent rgba(160, 159, 160, 1);
+  border-color: transparent transparent transparent #fbf5f3;
   right: 20px;
 }
 
@@ -314,7 +342,7 @@ footer span {
 }
 
 .day.today {
-  color: rgba(156, 202, 235, 1);
+  color: #ff9c2e;
 }
 
 .day-name {
@@ -358,7 +386,7 @@ footer span {
 
 .details {
   position: relative;
-  width: 420px;
+  width: 32em;
   height: 75px;
   background: rgba(164, 164, 164, 1);
   margin-top: 5px;
