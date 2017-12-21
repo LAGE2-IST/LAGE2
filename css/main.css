@@ -205,9 +205,6 @@ footer span {
   transform: translateY(5%);
 }
 
-.container {
-  padding: 0 16px;
-}
 
 /* Clear floats */
 .container::after, .row::after {
@@ -219,7 +216,7 @@ footer span {
 .container .member-name {
   display: block;
   margin-bottom: 20px;
-  font-size: 30px;
+  font-size: 28px;
   font-weight: bold;  
   color: black;
   text-align: center;
@@ -256,6 +253,7 @@ footer span {
   -webkit-transition: all .35s;
   -moz-transition: all .35s;
   transition: all .35s;
+  transform: translateY(5%);
 }
 
 
