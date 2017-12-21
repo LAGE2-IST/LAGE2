@@ -1,5 +1,8 @@
-html {
+html, body {
     font-family: 'Source Sans Pro', sans-serif;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 /* nav css */
@@ -38,6 +41,7 @@ footer ul li a {
 }
 
 footer span {
+  display: block;
   text-transform: uppercase;
   font-size: 14px;
   color: #ffffff;
@@ -114,11 +118,12 @@ footer span {
 }
 
 
-/** Members CSS
- ---------------------------------------------------------*/
+
+/* =============  Members CSS  ==================  */
+
 
 #members #intro-section{
-  padding: 128px 0px 25px 0px;
+  padding: 60px 0px 25px 0px;
   background-color: #002a32;
 }
 
@@ -177,10 +182,10 @@ footer span {
 
 /* Display the columns below each other instead of side by side on small screens */
 @media (max-width: 650px) {
-    .column {
-        width: 100%;
-        display: block;
-    }
+  .column {
+    width: 100%;
+    display: block;
+  }
 }
 
 .card {
@@ -188,59 +193,85 @@ footer span {
 }
 
 .card img {
-    border-radius: 50%;
-    background-color: gray;
-    width: 80%;
+  border-radius: 50%;
+  background-color: gray;
+  width: 60%;
+  display: block;
+  margin: auto;
+  transform: translateY(5%);
 }
 
 .container {
-    padding: 0 16px;
+  padding: 0 16px;
 }
 
 /* Clear floats */
 .container::after, .row::after {
-    content: "";
-    clear: both;
-    display: table;
+  content: "";
+  clear: both;
+  display: table;
 }
 
-.title {
-    color: grey;
+.container .member-name {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: bold;  
+  color: black;
+  text-align: center;
+}
+
+.container .job-title {
+  color: black;
+  display: block;
+  margin-bottom: 14px;
+  font-size: 20px;
+  text-decoration: underline;
+  text-align: center;
+}
+
+.container .member-mail {
+  color: gray;
+  display: block;
+  margin-bottom: 14px;
+  font-size: 16px;
+  text-align: center;
 }
 
 .member-box {
-    display: block;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    color: #fff;
-    opacity: 0;
-    background: rgba(255, 255, 255, .8);
-    -webkit-transition: all .35s;
-    -moz-transition: all .35s;
-    transition: all .35s;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  margin-top: 15px;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  color: #fff;
+  opacity: 0;
+  background: rgba(255, 255, 255, .8);
+  -webkit-transition: all .35s;
+  -moz-transition: all .35s;
+  transition: all .35s;
 }
 
 
 .fa {
-    display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .member-box-content {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    text-align: center;
-    transform: translateY(-50%);
-    font-size: 36px;
-    color: #777;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  transform: translateY(-50%);
+  font-size: 40px;
+  color: #777;
 }
 
 .member-linkedin-link {
@@ -251,3 +282,95 @@ footer span {
 .member-linkedin-link:hover .member-box {
   opacity: 1;
 }
+
+
+/*  ====================  END MEMBERS  ====================  */
+
+.gm-style-iw + div {
+  display: none;
+}
+
+#maps-info-window {
+  padding: 16px;
+}
+
+#maps-info-window .maps-title {
+  display: block;
+  margin-bottom: 14px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ff9c2e;
+}
+
+#maps-info-window .maps-text {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  color: #002a32;
+}
+
+
+/* contacts css */
+#contacts {
+  height: 100%;
+  overflow: hidden;
+}
+
+#contacts #map-section {
+  display: inline-block;
+  float: left;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#contacts #contact-section {
+  display: flex;
+  flex-flow: column;
+  width: 50%;
+  height: 100%;
+  float: right;
+  overflow: scroll;
+}
+
+#contacts #contact-section #information {
+  flex: 1 1 auto;
+}
+
+#contacts #contact-section #information .container {
+  padding: 15% 0px;
+}
+
+#contacts #contact-section #information .container #title {
+  display: block;
+  margin-bottom: 24px;
+  font-size: 24px;
+  color: #ff9c2e;
+}
+
+#contacts #contact-section #information .container .contact {
+  display: block;
+  padding: 4px 0px;
+  font-size: 16px;
+  color: #002a32;
+}
+
+#contacts #contact-section #information .container .contact i {
+  margin-right: 8px;
+  font-size: 22px;
+}
+
+#contacts #contact-section #information .container .contact a {
+  text-decoration: none;
+  color: #002a32 !important;
+}
+
+#contacts #contact-section #information .container .contact a:hover {
+  text-decoration: none;
+  color: #0b2027 !important;
+}
+
+#contacts #contact-section footer {
+  flex: 0 1 auto;
+}
+

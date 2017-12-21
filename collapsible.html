@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>LAGE2</title>
+
+  <!--Import Source Sans Pro Font-->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+
+  <!--Import Font Awesome Icon Font-->
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+  <link type="text/css" rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+	<script>
+	var dArray;
+	function init() {
+		FB.api(
+        '/166982312717',
+		'GET',
+		{"fields":"events{cover,start_time,end_time,name,description,place}",/* this must be extended: */"access_token":"EAACEdEose0cBAF5IUNcKPx80lIBA3nVP9oqd5xemZCsvG0diNMurH385gTex5vwvZAZCIub6lTaZCZCQbBmGyR56UtVvyhSClJ4d3eTQSE9IWcpeG6LACKzzQowo94vRWSnFzSEQIL2sf151rZB7CJ2aLvt4BDjPUDvDpVLU2TZBfWiyZBu6EvMLynZACIyfrRsQFOUBqn8NMagZDZD"},
+		function(response) { 
+			console.log(response); //for testing purposes
+			document.getElementById("coverdemo").src = response.events.data[0]["cover"]["source"];
+			document.getElementById("namedemo").innerHTML = response.events.data[0]["name"];
+		}
+	   );
+    }
+	
+	window.fbAsyncInit = function() {
+		FB.init({
+		  appId            : '1854855377876841',
+		  autoLogAppEvents : true,
+		  xfbml            : true,
+		  version          : 'v2.11'
+		});
+		init();
+	};
+
+	(function(d, s, id){
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) {return;}
+		js = d.createElement(s); js.id = id;
+		js.src = "https://connect.facebook.net/en_US/sdk.js";
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+
+   </script>
+	<nav>
+    <div class="nav-wrapper">
+      <a href="index.html" class="brand-logo">LAGE2</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="sass.html">Quem Somos?</a></li>
+        <li><a href="collapsible.html">Actividades</a></li>
+        <li><a href="badges.html">Membros</a></li>
+        <li><a href="contacts.html">Contactos</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="sass.html">Quem Somos?</a></li>
+        <li><a href="badges.html">Contactos</a></li>
+        <li><a href="collapsible.html">Membros</a></li>
+        <li><a href="contacts.html">Contactos</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <main id="events">
+    <section id="events-section">
+		<span id="title">Eventos:</span>
+				
+		<img id="coverdemo"></img>
+		<div id="namedemo"><div>
+
+	</section>
+	
+  </main>
+
+</body>
+</html>
