@@ -769,6 +769,7 @@ footer span {
 }
 
 img.resize {
-  width:300px;
-  height:200px;
+  object-fit: contain;
+  width: 450px;
+  height: 350px;
 }
