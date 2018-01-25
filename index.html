@@ -25,7 +25,7 @@
 
   <nav>
     <div class="nav-wrapper">
-      <a href="/" class="brand-logo">LAGE2</a>
+      <a href="/" class="brand-logo"><img src="images/logolage.png" alt="LAGE2"></a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul class="right hide-on-med-and-down">
         <li><a href="events.html">Actividades</a></li>
@@ -152,15 +152,34 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script type="text/javascript" src="js/materialize.min.js"></script>
   <script type="text/javascript">
-    $(".button-collapse").sideNav();
+  $(".button-collapse").sideNav();
 
-    function initMap() {
-      var mapOptions = {
-          center: new google.maps.LatLng(38.737383, -9.303124),
-          zoom: 10
-        }
-      var map = new google.maps.Map(document.getElementById("map-section"), mapOptions);
+  function initMap() {
+    var mapOptions = {
+      center: new google.maps.LatLng(38.738036, -9.303232),
+      disableDefaultUI: true,
+      clickableIcons: false,
+      draggable: false,
+      zoom: 17
     }
+
+    var map = new google.maps.Map(document.getElementById("map-section"), mapOptions);
+    initialize(map);
+  }
+
+  function initialize(map) {
+    var infoWindow = new google.maps.InfoWindow();
+    var windowLatLng = new google.maps.LatLng(38.737383, -9.303124);
+    infoWindow.setOptions({
+      content: "<div id='maps-info-window'>                                     \
+      <span class='maps-title'>Campus TagusPark - Sala 0.55</span>  \
+      <span class='maps-text'>Av. Prof. Dr. Cavaco Silva</span>     \
+      <span class='maps-text'>2744-016 Porto Salvo</span>           \
+      </div>",
+      position: windowLatLng
+    });
+    infoWindow.open(map);
+  }
   </script>
 </body>
 </html>

@@ -14,6 +14,11 @@ nav .brand-logo {
   padding-left: 16px;
 }
 
+nav .brand-logo img {
+  height: 48px;
+  padding-top: 8px;
+}
+
 nav .brand-logo {
   color: #ff9c2e !important;
 }
