@@ -63,7 +63,8 @@ footer span {
 
 #home #top-section .title-container .title {
   display: block;
-  font-size: 32px;
+  font-size: 48px;
+  font-weight: bold;
   color: #ff9c2e;
 }
 
@@ -217,7 +218,7 @@ footer span {
   display: block;
   margin-bottom: 20px;
   font-size: 26px;
-  font-weight: bold;  
+  font-weight: bold;
   color: black;
   text-align: center;
 }
